@@ -33,7 +33,7 @@ def login(wd, login_url):
     wdw.until(expect.presence_of_element_located(next_locator))
     next_bt = wd.find_element(*next_locator)
     next_bt.click()
-    time.sleep(2)
+    time.sleep(2) #This sleep was necessary, because next class of password have same of login class name.
 
     
     key_locator = (By.CSS_SELECTOR, 'input[class="whsOnd zHQkBf"]')
